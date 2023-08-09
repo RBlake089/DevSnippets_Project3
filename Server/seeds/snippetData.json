@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Snippet #1",
+    "description": "Snippet description #1",
+    "code": "Snippet code #1",
+    "language": "Snippet language #1",
+    "tags": "Tag1, Tag2",
+    "username": "Sal"
+  },
+  {
+    "title": "Snippet #2",
+    "description": "Snippet description #2",
+    "code": "Snippet code #2",
+    "language": "Snippet language #2",
+    "tags": "Tag3, Tag4",
+    "username": "Lernantino"
+  },
+  {
+    "title": "Snippet #3",
+    "description": "Snippet description #3",
+    "code": "Snippet code #3",
+    "language": "Snippet language #3",
+    "tags": "Tag5, Tag6",
+    "username": "Amiko"
+  }
+]

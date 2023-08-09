@@ -1,0 +1,510 @@
+/* Global styles */
+:root {
+  --black: #000000;
+  --gold: #ffd700;
+  --grey: #1259ab;
+}
+
+
+
+
+body {
+  background-color: var(--black);
+  color: var(--gold);
+}
+
+hr{
+  color: var(--gold);
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--black);
+  color: var(--gold);
+}
+
+.logo a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.logo a:hover {
+  text-shadow: 0 2px 4px #ffffff80; /* Add a gold box shadow to the logo on hover */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-right: 1rem;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #766000; /* Change to a lighter gold color on hover */
+}
+
+/* Container styles */
+.snippet-list {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 2px solid var(--gold);
+  border-radius: 10px;
+}
+
+/* Snippet item styles */
+.snippet-item {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid var(--gold);
+  border-radius: 5px;
+  list-style: none;
+}
+
+.snippet-item p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.snippet-item pre {
+  background-color: var(--gold);
+  color: var(--black);
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+/* Form styles */
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+  /* Add some top margin to separate the form from the snippets list */
+  
+}
+.form-container textarea {
+  width: 100%; /* Make the textarea fill the entire div/form */
+  resize: vertical; /* Allow vertical resizing */
+}
+.form-container .buttons:hover {
+  background-color: #ffd200; /* Lighter gold color on hover */
+  color: var(--black);
+}
+
+.form-container label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--gold);
+  display: block;
+}
+
+p,
+option {
+  width: 100%; /* Both p and option will take the full width available */
+}
+
+.form-container .form-control {
+  font-size: 1rem;
+  background-color: transparent;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.form-container .form-control::placeholder {
+  color: var(--gold);
+}
+
+.form-container .submit-button {
+  grid-column: 1 / span 2;
+  background-color: var(--gold);
+  color: var(--black);
+  font-size: 1.2rem;
+  border: 2px solid var(--gold);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+
+.add-snippet-button {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border: 2px solid #C07F00;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, #FFD95A, #FFF7D4);
+  color: #272829;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.add-snippet-button:hover{
+  background-image: linear-gradient(to right, #FFEA20, #FFF7D4);
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.buttons{
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border: 2px solid #C07F00;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, #FFD95A, #FFF7D4);
+  color: #272829;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.buttons:hover{
+  background-image: linear-gradient(to right, #FFEA20, #FFF7D4);
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Alert styles */
+.alert {
+  margin-bottom: 1rem;
+  background-color: #721c24;
+  color: #f8d7da;
+  border-color: #721c24;
+  border-radius: 5px;
+  padding: 0.75rem;
+  width: 100%;
+  text-align: center;
+}
+
+/* SnippetList.css */
+
+/* Style for the tags container */
+.tags-container {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Style for the tags list */
+.tags-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style for individual tag items */
+.tag-item {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 3px;
+}
+
+.fancyButtons {
+  margin-top: 5px;
+}
+
+/* SnippetList.css */
+
+/* Style for the snippet title */
+.snippet-title {
+  font-size: 50px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/* Style for the snippet description */
+.snippet-description {
+  font-style: italic;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+/* Style for the snippet header */
+.snippet-header {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.edit-snippet-button,
+.delete-snippet-button,
+.copy-snippet-button {
+  margin-right: 10px;
+  font-size: 16px;
+  border: 2px solid var(--gold);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: var(--gold);
+  color: var(--black);
+}
+.edit-snippet-button:hover,
+.delete-snippet-button:hover,
+.copy-snippet-button:hover {
+  background-color: #ffd200; /* Change to a lighter gold color on hover */
+  color: var(--black);
+}
+
+/* Home.css */
+
+/* Center the content of the Home component */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set the height to the full viewport height */
+}
+
+/* Style for the home content */
+.home-content {
+  text-align: center;
+}
+
+/* Style for the home title */
+.home-title {
+  font-size: 100px;
+  font-weight: bold;
+  color: var(
+    --gold
+  ); /* Assuming you want to use the same gold color as in the rest of the application */
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px #ffffff80; /* Add a gold box shadow to the title */
+}
+
+/* Style for the home subtitle */
+.home-subtitle {
+  font-size: 25px;
+  font-style: italic;
+  color: var(
+    --gold
+  ); /* Assuming you want to use the same gold color as in the rest of the application */
+  text-shadow: 0 2px 4px #ffffff80; /* Add a gold box shadow to the title */
+}
+
+/* LoginForm.css */
+
+/* Style for the login container */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border: 2px solid var(--gold);
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 400px;
+}
+
+/* Style for the login title */
+.login-title {
+  font-size: 24px;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+/* Style for the login form */
+.login-form {
+  width: 100%;
+}
+
+/* Style for the form label */
+.form-label {
+  font-size: 16px;
+  color: var(--gold);
+}
+
+/* Style for the form control */
+.form-control {
+  font-size: 14px;
+  background-color: transparent;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+/* Style for the alert message */
+.alert-danger {
+  margin-bottom: 1rem;
+  background-color: #721c24;
+  color: #f8d7da;
+  border-color: #721c24;
+  border-radius: 5px;
+  padding: 0.75rem;
+  width: 100%;
+  text-align: center;
+}
+
+/* Style for the login button */
+.login-button {
+  margin-top: 1rem;
+  font-size: 16px;
+  border: 2px solid var(--gold);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  width: 100%;
+  background-color: var(--gold);
+  color: var(--black);
+}
+
+/* Hover style for the login button */
+.login-button:hover {
+  background-color: #ffd200; /* Change to a lighter gold color on hover */
+  color: var(--black);
+}
+
+/* SignupForm.css */
+
+/* Style for the signup container */
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border: 2px solid var(--gold);
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 400px;
+}
+
+/* Style for the signup title */
+.signup-title {
+  font-size: 24px;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+/* Style for the signup form */
+.signup-form {
+  width: 100%;
+}
+
+/* Style for the form label */
+.form-label {
+  font-size: 16px;
+  color: var(--gold);
+}
+
+/* Style for the form control */
+.form-control {
+  font-size: 14px;
+  background-color: transparent;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+/* Style for the alert message */
+.alert-danger {
+  margin-bottom: 1rem;
+  background-color: #721c24;
+  color: #f8d7da;
+  border-color: #721c24;
+  border-radius: 5px;
+  padding: 0.75rem;
+  width: 100%;
+  text-align: center;
+}
+
+/* Style for the signup button */
+.signup-button {
+  margin-top: 1rem;
+  font-size: 16px;
+  border: 2px solid var(--gold);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  width: 100%;
+  background-color: var(--gold);
+  color: var(--black);
+}
+
+/* Hover style for the signup button */
+.signup-button:hover {
+  background-color: #ffd200; /* Change to a lighter gold color on hover */
+  color: var(--black);
+}
+
+/* Animation for the home title */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to the home title */
+.home-title {
+  /* Animation for the home title */
+  animation: jump 5s ease infinite;
+}
+
+
+/* styles.css */
+.alert-success {
+  background-color: #d4edda; /* Replace with the desired green color code */
+  color: #155724; /* Replace with the desired text color for success message */
+}
+
+
+/* Animation for the home title - "wiggle" effect */
+@keyframes wiggle {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-3px);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Animation for the home title - "jump" effect */
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
